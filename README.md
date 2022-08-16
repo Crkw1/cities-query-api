@@ -1,2 +1,2 @@
 # cities-api
-Teste API 
+API de consulta de CEP 
