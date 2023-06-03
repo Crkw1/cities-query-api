@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
+
 import java.util.Optional;
 
 @RestController
-@RequestMapping ("/countries")
-public class CountryResource  {
+@RequestMapping("/countries")
+public class CountryResource {
 
     private final CountryRepository repository;
 
@@ -25,7 +25,7 @@ public class CountryResource  {
 
     @GetMapping
     public Page<Country> countries(Pageable page) {
-    return repository.findAll(page);
+        return repository.findAll(page);
     }
 
     @GetMapping("/{id}")
