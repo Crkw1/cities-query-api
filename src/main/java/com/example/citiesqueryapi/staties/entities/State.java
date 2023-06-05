@@ -3,7 +3,6 @@ package com.example.citiesqueryapi.staties.entities;
 
 import com.example.citiesqueryapi.countries.entities.Country;
 import com.vladmihalcea.hibernate.type.json.JsonBinaryType;
-import com.vladmihalcea.hibernate.type.json.JsonType;
 import jakarta.persistence.*;
 import lombok.Getter;
 import org.hibernate.annotations.Type;
@@ -39,7 +38,7 @@ public class State {
     @JoinColumn(name = "pais", referencedColumnName = "id")
     private Country country;
 
-    @Type(JsonType.class)
+    @Type(JsonBinaryType.class)
     @Basic(fetch = FetchType.LAZY)
     @Column(name = "ddd", columnDefinition = "jsonb")
     private List<Integer> ddd;
